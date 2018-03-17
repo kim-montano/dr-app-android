@@ -233,8 +233,9 @@ class CameraFragment : Fragment(), View.OnClickListener,
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         view.findViewById<View>(R.id.picture).setOnClickListener(this)
         textureView = view.findViewById(R.id.texture)
-        var pagerAdapter = CameraPagerAdapter(activity!!.supportFragmentManager, arrayOf("asdf", "asdfasdf"))
-        images_view_pager.adapter
+        var pagerAdapter = CameraPagerAdapter(activity!!.supportFragmentManager,
+                arrayOf("sample_iphone_x_front.png", "sample_iphone_x_side.png", "sample_iphone_x_back.png"))
+        images_view_pager.adapter = pagerAdapter
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

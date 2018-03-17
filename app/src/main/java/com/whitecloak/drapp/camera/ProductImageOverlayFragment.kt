@@ -32,7 +32,8 @@ class ProductImageOverlayFragment : Fragment() {
 
             // Store the movie data in a Bundle object
             val args = Bundle()
-            args.putString("PRODUCT_IMAGE_PATH", productImagePath)
+            val asset_base_url = "file:///android_asset/"
+            args.putString("PRODUCT_IMAGE_PATH", asset_base_url + productImagePath)
 
             // Create a new MovieFragment and set the Bundle as the arguments
             // to be retrieved and displayed when the view is created

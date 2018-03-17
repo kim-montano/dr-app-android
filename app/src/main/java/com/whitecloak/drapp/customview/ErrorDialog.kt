@@ -12,9 +12,9 @@ import android.support.v7.app.AlertDialog
 class ErrorDialog : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog =
-            AlertDialog.Builder(activity)
-                    .setMessage(arguments.getString(ARG_MESSAGE))
-                    .setPositiveButton(android.R.string.ok) { _, _ -> activity.finish() }
+            AlertDialog.Builder(activity!!.baseContext)
+                    .setMessage(arguments!!.getString(ARG_MESSAGE))
+                    .setPositiveButton(android.R.string.ok) { _, _ -> activity!!.finish() }
                     .create()
 
     companion object {
