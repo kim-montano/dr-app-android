@@ -27,16 +27,12 @@ class ProductImageOverlayFragment : Fragment() {
 
     companion object {
 
-        // Method for creating new instances of the fragment
         fun newInstance(productImagePath: String): ProductImageOverlayFragment {
 
-            // Store the movie data in a Bundle object
             val args = Bundle()
             val asset_base_url = "file:///android_asset/"
-            args.putString("PRODUCT_IMAGE_PATH", asset_base_url + productImagePath)
+            args.putString(PRODUCT_IMAGE_PATH_KEY, asset_base_url + productImagePath)
 
-            // Create a new MovieFragment and set the Bundle as the arguments
-            // to be retrieved and displayed when the view is created
             val fragment = ProductImageOverlayFragment()
             fragment.arguments = args
             return fragment
